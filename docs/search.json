@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Coding styles for using R packages",
+    "section": "",
+    "text": "We will discuss the options for how to call R packages in an R script."
+  },
+  {
+    "objectID": "index.html#using-library",
+    "href": "index.html#using-library",
+    "title": "Coding styles for using R packages",
+    "section": "1. Using library()",
+    "text": "1. Using library()\n\nPros\n\nThe original way to code R scripts\nlibrary() loads then attaches a package making all the exported functions in a package available to you (see here for the difference between loading and attaching)\nMore succinct code\n\nlibrary()Qualifying namespace\n\n\nlibrary(ggplot2)\n\nggplot(df, aes(gp, y)) +\n  geom_point() +\n  geom_point(data = ds, aes(y = mean), colour = 'red', size = 3)\n\n\nggplot2::ggplot(df, ggplot2::aes(gp, y)) +\n  ggplot2::geom_point() +\n  ggplot2::geom_point(data = ds, ggplot2::aes(y = mean), \n                      colour = 'red', size = 3)\n\n\n\n\nCons\n\nArguably unclear which package each function call comes from\nFunctions can be masked when additional packages with functions with the same name are attached, e.g. after loading the tidyverse calling filter() uses dplyr::filter() instead of stats::filter()\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.7     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.0\n✔ readr   2.1.2     ✔ forcats 0.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()"
+  },
+  {
+    "objectID": "index.html#using-namespace-prefix-qualifying-namespaces",
+    "href": "index.html#using-namespace-prefix-qualifying-namespaces",
+    "title": "Coding styles for using R packages",
+    "section": "2. Using namespace prefix / qualifying namespaces",
+    "text": "2. Using namespace prefix / qualifying namespaces\n\nPros\n\nClear which package every function comes from\n\nCons\n\nMore verbose/longer code (and easy to forget to prefix every function call e.g. aes()). See example above\nEach prefixed function call is very slightly slower than the equivalent unprefixed function call (see here)"
+  },
+  {
+    "objectID": "index.html#additional-points",
+    "href": "index.html#additional-points",
+    "title": "Coding styles for using R packages",
+    "section": "Additional points",
+    "text": "Additional points\n\nPoint of confusion: are you or is the advice you are reading referring to coding an analysis script or the function in a package?\n\nThe tidyverse style guide uses library() calls at the top of their R scripts (see here)\nPackage name prefixing is recommended within the R files of a package for CRAN. This is when you are importing functions from another package rather than the whole package (and you should never really import the whole package), see here\nThe Google R style guide also requires package prefixing (although it is unclear whether this refers to coding scripts or packages), see here\n\nTo access unexported functions from a package under both approaches you need to use triple colon syntax, i.e.,\npackage:::unexportedfunction(...)"
+  }
+]
