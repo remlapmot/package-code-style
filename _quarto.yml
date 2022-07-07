@@ -1,0 +1,7 @@
+project:
+  output-dir: docs
+
+format:
+  html:
+    toc: true
+    link-external-icon: true
