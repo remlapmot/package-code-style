@@ -68,7 +68,7 @@ We will discuss the options for how to call R packages in an R script.
 * Cons
   * More verbose/longer code (and easy to forget to prefix every function call e.g. `aes()`). See example above
   * Each prefixed function call is very slightly slower than the equivalent unprefixed function call (see [here](https://r-pkgs.org/dependencies.html#run-time-vs-develop-time-dependencies))
-  
+
 ## Additional points
 
 * _**Point of confusion**_: are you or is the advice you are reading referring to coding an analysis script or the function in a package?
