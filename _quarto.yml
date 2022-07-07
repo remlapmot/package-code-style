@@ -1,5 +1,13 @@
 project:
+  type: website
   output-dir: docs
+
+website:
+  title: Coding styles for using R packages
+  link-external-icon: true
+  repo-url: https://github.com/remlapmot/package-code-style
+  repo-actions: source
+  site-url: https://remlapmot.github.io/package-code-style/
 
 format:
   html:
