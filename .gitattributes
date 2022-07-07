@@ -5,4 +5,4 @@
 *.html linguist-vendored
 
 # Include Rmd files in repo Languages pane
-*.[Rr]md linguist-detectable
+*.[qRr]md linguist-detectable
