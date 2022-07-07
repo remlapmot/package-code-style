@@ -8,4 +8,5 @@
 *.js linguist-vendored
 
 # Include Rmd files in repo Languages pane
-*.[qRr]md linguist-detectable
+*.[Rr]md linguist-detectable
+*.qmd linguist-language=RMarkdown
