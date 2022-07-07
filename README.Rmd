@@ -10,7 +10,7 @@ To render the document ensure Quarto is installed and run (or click the _Render_
 
 ```{r, eval=FALSE}
 # install.packages('quarto')
-quarto::quarto_render('index.qmd')
+quarto::quarto_render()
 ```
 
 The latest render was run under Quarto version `r quarto::quarto_version()`
