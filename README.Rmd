@@ -1,0 +1,16 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# package-code-style
+
+To render the document ensure Quarto is installed and run (or click the _Render_ button in the RStudio Source pane)
+
+```{r, eval=FALSE}
+# install.packages('quarto')
+quarto::quarto_render('index.qmd')
+```
+
+The latest render was run under Quarto version `r quarto::quarto_version()`
