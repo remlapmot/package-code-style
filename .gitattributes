@@ -9,4 +9,4 @@
 
 # Include Rmd files in repo Languages pane
 *.[Rr]md linguist-detectable
-*.qmd linguist-detectable
+*.qmd linguist-detectable linguist-language=RMarkdown
