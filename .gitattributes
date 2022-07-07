@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ignore html
+*.html linguist-vendored
+
+# Include Rmd files in repo Languages pane
+*.[Rr]md linguist-detectable
