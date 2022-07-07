@@ -4,5 +4,8 @@
 # Ignore html
 *.html linguist-vendored
 
+# Ignore Javascript
+*.js linguist-vendored
+
 # Include Rmd files in repo Languages pane
 *.[qRr]md linguist-detectable
