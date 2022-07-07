@@ -2,10 +2,6 @@
 title: "Coding styles for using R packages"
 author: "TP"
 date: "2022-07-06"
-format:
-  html:
-    toc: true
-    link-external-icon: true
 ---
 
 ## Intro
